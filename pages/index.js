@@ -1,65 +1,55 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+      <Navbar/>
+      
+      <section className="hero">
+        <div className="container">
+          <div className="txt-wrapper">
+            <h4 className="title">Hello, I'm Galih F. R.</h4>
+            <h2 className="title-job">Frontend Developer & UI/UX Designer Enthusiast.</h2>
+            <p className="description">
+              I'm a Frontend Developer and UI/UX enthusiast for more than 2 years. I've worked for a Indonesian Company as Frontend Developer for 2 years. In my spare time i like to explore about UI/UX Design.
             </p>
-          </a>
-        </div>
-      </main>
+            <div className="txt-contact">
+              <button className="btn-action">Email Me</button>
+              <div className="social-media">
+                <img src="/linkedin-outline.svg"/>
+                <img src="/instagram.svg"/>
+              </div>
+            </div>
+          </div>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+          <div className="image-wrapper">
+            <img src="/hero.svg" alt="my-hero" className="my-hero"/>
+          </div>
+        </div>
+      </section>
+
+      <section className="tools-skills">
+              <div className="container">
+                <div className="tools-wrapper">
+                  <h4 className="title">Tools & Skills</h4>
+                  <ul className="tools-image-wrapper">
+                    <li><img src="/logo-figma.svg" className="image-item"/></li>
+                    <li><img src="/logo-photoshop.svg" className="image-item"/></li>
+                    <li><img src="/logo-html.svg" className="image-item"/></li>
+                    <li><img src="/logo-sass.svg" className="image-item"/></li>
+                    <li><img src="/logo-js.svg" className="image-item"/></li>
+                  </ul>
+                </div>
+              </div>
+      </section>
+    </>
   )
 }
+
+export default Home;
